@@ -6,10 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/millker/mini-vite.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "koa": "^2.13.4"
-  }
+  "bugs": {
+    "url": "https://github.com/millker/mini-vite/issues"
+  },
+  "homepage": "https://github.com/millker/mini-vite#readme"
 }
