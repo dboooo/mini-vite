@@ -4,26 +4,14 @@ import chalk from 'chalk'
 import dotenv from 'dotenv'
 import {lookupFile} from './utils/fsUtils'
 
-// 定义类型：
-export interface UserConfig  {
-    plugins?: Plugin []
-}
-
-export interface Plugin {
-
-}
-
 const debug = require('debug')
 
-export async function resolveConfig(
-    mode: string,
-    configPath?: string
-) {
+export async function resolveConfig() {
     // 用来分析resolve花费的时间
     const start = Date.now()
     const cwd = process.cwd()
 
-    let resolvedPath: string | undefined
+    let resolvedPath;
     // 得到vite.config.[jt]s的路径
     if (configPath) {
         resolvedPath = path.resolve(cwd, configPath)
@@ -54,7 +42,7 @@ export async function resolveConfig(
         if (!isTS) {
             try {
                 userConfig = require(resolvedPath)
-            } catch (err: any) {
+            } catch (err) {
                 const ignored = /Cannot use import statement|Unexpected token 'export'|Must use import to load ES Module/
                 if (!ignored.test(err.message)) {
                 throw err
