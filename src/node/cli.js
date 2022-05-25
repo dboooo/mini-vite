@@ -72,5 +72,7 @@ async function resolveOptions(argv, defaultMode) {
 }
 
 function runServe(options) {
-    const server = import('./server')
+    const server = createServer(options)
+
+    
 }

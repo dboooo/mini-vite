@@ -2,11 +2,7 @@ import path from 'path'
 import fs from 'fs-extra'
 import chalk from 'chalk'
 
-export function lookupFile (
-    dir: string,
-    formats: string[],
-    pathOnly = false
-): string | undefined{
+export function lookupFile ( dir,formats,pathOnly ) {
     for (const format of formats) {
         const fullPath = path.join(dir, format)
         if (fs.existsSync(fullPath) && fs.statSync(fullPath).isFile()) {
