@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import minimist from 'minimist'
 import path from 'path'
 import { resolveConfig } from './config'
-import { createServer } from './server/index'
+import { createServer } from './server/index' 
 
 const start = Date.now()
 const argv = minimist(process.argv.slice(2))
