@@ -1,1 +1,1 @@
-# 项目会基于vite1.0x 模仿它去写一个更轻量的vite
+## mini_vite
