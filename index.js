@@ -1,3 +1,9 @@
 import { createApp, h } from 'vue'
 
-createApp(h('div', 'hello mini-vite')).mount('#app')
+window.process = {
+    env: {
+        NODE_ENV: 'development'
+    }
+}
+
+createApp({}).mount('#app')

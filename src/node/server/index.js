@@ -7,6 +7,7 @@ const rewrite = require('../utils/index')
 const app = new Koa()
 
 app.use(async (ctx, next)=>{
+    console.log(ctx.body);
     const { url } = ctx
     const rootPath = process.cwd()
     if( url === '/' ) {

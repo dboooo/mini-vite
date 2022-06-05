@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "jest"
   },
@@ -19,6 +18,7 @@
   },
   "homepage": "https://github.com/millker/mini-vite#readme",
   "dependencies": {
+    "@vue/runtime-dom": "^3.2.36",
     "cac": "^6.7.12",
     "chalk": "^5.0.1",
     "debug": "^4.3.4",
