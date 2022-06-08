@@ -1,9 +1,4 @@
 import { createApp, h } from 'vue'
+import App from './app.vue'
 
-window.process = {
-    env: {
-        NODE_ENV: 'development'
-    }
-}
-
-createApp({}).mount('#app')
+createApp(App).mount('#app')
